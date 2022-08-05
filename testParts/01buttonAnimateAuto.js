@@ -13,26 +13,28 @@ class button
     animationTo= function(buttonRecived)
     {   
         let click= false;
-        let begginx= this.objectAnimation.beggin;
+        let {beggin,ending,optionFrames}=this.objectAnimation;
+
+        /*let begginx= this.objectAnimation.beggin;
         let optionx= this.objectAnimation.optionFrames;
-        let endingx=this.objectAnimation.ending;
+        let endingx=this.objectAnimation.ending;*/
         
         function animate(){
      
-        console.log(begginx)
+        console.log(beggin)
        
 
         switch(click){
 
         
             case false:
-                buttonRecived.animate(begginx, optionx);
+                buttonRecived.animate(beggin, optionFrames);
                 click=true;
             break;
             
             case true:
             
-                buttonRecived.animate(endingx, optionx);
+                buttonRecived.animate(ending, optionFrames);
                 click=false;
         }
         
@@ -45,7 +47,7 @@ class button
 
 
 
-/*Ahora bien el abjectAnimation seria:*/ 
+/*Ahora bien el objectAnimation seria:*/ 
 let objectAnimation=
 {
     beggin: [{transform: "rotate(360deg)"}],//fotogramas claves
@@ -63,6 +65,8 @@ let btnOne=test1.animationTo(elementFromDom);
 let btnTest= document.querySelector(".btnTest");
 
 btnTest.addEventListener("click", btnOne);
+
+
 
 
 
