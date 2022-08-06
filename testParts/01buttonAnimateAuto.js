@@ -1,6 +1,9 @@
 /*Definir una clase boton al cual se le pueda ser asiganado una animacion, utilizando la API web*/
 /*OBJETIVO:
-animar button*/ 
+agregar 
+-animacion
+-funcionalidad
+-plus;auto Creacion*/ 
 
 
 /*FUNCIONAMIENTO de la clase Button:
@@ -45,10 +48,13 @@ class button //Clase button
         this.objectAnimation=objectAnimation;
     }
 
-    animationTo= function(buttonRecived)
+    animationTo= function(buttonRecived, givenFunction)
     {   
         let click= false;
         let {beggin,ending,optionFrames}=this.objectAnimation;
+        let {begginFun,endingFun}=givenFunction;
+        console.log(givenFunction)
+      
 
         /*let begginx= this.objectAnimation.beggin;
         let optionx= this.objectAnimation.optionFrames;
@@ -64,12 +70,15 @@ class button //Clase button
         
             case false:
                 buttonRecived.animate(beggin, optionFrames);
+                begginFun();
+                
                 click=true;
             break;
             
             case true:
             
                 buttonRecived.animate(ending, optionFrames);
+                endingFun();
                 click=false;
         }
         
@@ -78,6 +87,8 @@ class button //Clase button
 
         return animate
     }
+
+
 }
 
 
@@ -91,32 +102,55 @@ let objectAnimation=
 }
 
 
+/*El object function seria*/
+
+/*debo traerme los elemtos del DOM, el cual seran modificados por el button*/
+let space=document.querySelector(".body");
+
+let givenFunctionObject=
+{
+    begginFun: ()=> space.style.backgroundColor="#EBCE10",
+    endingFun: ()=> space.style.backgroundColor=""
+
+} 
+
+let givenFunctionObjectBtnTwo=
+{
+    begginFun: ()=> space.style.backgroundColor="#9E0E61",
+    endingFun: ()=> space.style.backgroundColor=""
+
+} 
+
+
 
 /*Instanciar la clase*/
-let test1= new button(objectAnimation)
+let buttonTurn= new button(objectAnimation);//button; clave buttonTurn
 
- let elementFromDom= document.querySelector(".btn");
-let btnOne=test1.animationTo(elementFromDom);
-let btnTest= document.querySelector(".btnTest");
+let elementFromDom= document.querySelector(".btn");
 
-btnTest.addEventListener("click", btnOne);
+//Enlace: El metodo animationTo devuelve un closure, la funcion retornada es la que ejecuta el metodo animate(), con el element traido del DOM pasado como argumento al metodo animationTo. 
 
+let btnOne= buttonTurn.animationTo(elementFromDom, givenFunctionObject);//se realiza el enlace "btnOne"
+let btnTest= document.querySelector(".btnTest").onclick=btnOne//OYENTE
 
-
-
-
-let test2= new button(objectAnimation);
-
-let elementFromDomKamila= document.querySelector(".btnKamila")
-let btnTwo=test2.animationTo(elementFromDomKamila);
-let btnTestKamila= document.querySelector(".btnTestKamila");
-
-btnTestKamila.addEventListener("click", btnTwo);
+/*btnTest.addEventListener("click", btnOne);*/
 
 
 
 
 
+
+
+let elementFromDomKamila= document.querySelector(".btnKamila")//ENLACE 
+let btnTwo= buttonTurn.animationTo(elementFromDomKamila,givenFunctionObjectBtnTwo);
+
+let btnTestKamila= document.querySelector(".btnTestKamila").onclick=btnTwo//OYENTE
+/*btnTestKamila.addEventListener("click", btnTwo);*/
+
+
+
+
+/*#EBCE10*/ 
 
 
 
