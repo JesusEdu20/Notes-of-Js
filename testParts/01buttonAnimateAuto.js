@@ -3,9 +3,44 @@
 animar button*/ 
 
 
-class button 
+/*FUNCIONAMIENTO de la clase Button:
+Para inicializar un button en el DOM, el cual posea la animacion dada de entrada y salida, es
+preciso instanciar la clase button, cuya clase recibe como argumento un objeto(en el codigo es declarado como "objectAnimation")el cual contendra como propiedades los  objetos que contendran la aniamciones, tanto de entrada como de salida, del mismo modo dichos obejetos
+seran pasados al metodo animate()*/
+
+
+/*SINTAXIS del metodo Animate()
+El mismo designa una animacion a un elemento traido del DOM, dicho metodo proviene de la API integrada 
+directamente al navegador, 
+
+element.animate
+([{arregloDeObjetos:   "propiedades de animacion de css"},
+    {arregloDeObjetos: "propiedades de animacion de css"},
+    {arregloDeObjetos: "propiedades de animacion de css"}])
+*/
+
+
+/*Sintaxis de objectAnimation
+let objectAnimation=
 {
-    constructor(objectAnimation)// se le pasara por parametro la un objetoAnimation
+   
+
+    beggin: [{transform: "rotate(360deg)"}],//fotogramas claves
+    ending: [{transform: "rotate(-180deg)"}],//fotogramas claves; animacion de cierre
+    optionFrames: { duration: 1000, iterations:1}
+
+
+}
+*/
+
+
+
+/*CODIGO*/
+
+
+class button //Clase button
+{
+    constructor(objectAnimation)// se le pasara por parametro un objetoAnimation
     {
         this.objectAnimation=objectAnimation;
     }
