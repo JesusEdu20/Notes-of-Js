@@ -91,6 +91,66 @@ class button //Clase button
 
 }
 
+/*Clase inicializadora de buttons en el DOM*/
+
+class buttonAuto 
+{
+    constructor(classImport)
+    {
+        this.classImport= classImport || "material-symbols-outlined";
+    }
+
+    lookElement= function(classButton,ubicationButton,iconSpan)
+    {
+        let classBtn=classButton;
+        let ubicationBtn=document.querySelector(ubicationButton)//se le pasa clase, en string
+        let icon=iconSpan;
+        let classImported=this.classImport
+
+        function element()
+        {
+
+            let elementButton= document.createElement("button");
+            let spanElement=document.createElement("span");
+            ubicationBtn.appendChild(elementButton);
+            elementButton.appendChild(spanElement);
+            elementButton.classList.add(`${classBtn}`)
+            spanElement.classList.add(classImported);
+           
+            
+            spanElement.innerHTML=icon
+            coleccionBtn.push(elementButton)
+
+           
+
+        }
+
+        return element
+    }
+}
+
+/*let coleccionBtn=[]
+
+console.log(coleccionBtn)
+
+
+let objectColeccionBtn={...coleccionBtn}
+let {}=objectColeccionBtn
+
+console.log(objectColeccionBtn)*/
+
+let coleccionBtn=[]
+
+
+let autoBtn= new buttonAuto();
+
+let firtsBtnAuto=autoBtn.lookElement("clasePrueba",".body","star");
+firtsBtnAuto()
+
+let second= autoBtn.lookElement("clasePruebaTwo","body", "favorite");
+second()
+
+
 
 
 /*Ahora bien el objectAnimation seria:*/ 
@@ -113,6 +173,9 @@ let givenFunctionObject=
     endingFun: ()=> space.style.backgroundColor=""
 
 } 
+
+
+
 
 let givenFunctionObjectBtnTwo=
 {
@@ -148,6 +211,12 @@ let btnTestKamila= document.querySelector(".btnTestKamila").onclick=btnTwo//OYEN
 /*btnTestKamila.addEventListener("click", btnTwo);*/
 
 
+/*OJO test para animar button automatico*/
+
+let btnTree= buttonTurn.animationTo( coleccionBtn[0],givenFunctionObjectBtnTwo);
+let testBtnTree= coleccionBtn[0];
+testBtnTree.onclick=btnTree
+
 
 
 /*#EBCE10*/ 
@@ -170,3 +239,10 @@ let test=fun();
 let test2=fun("jesus");
 test()
 test2()*/
+
+
+
+
+let a=[2]
+let result= 2+ a[0]
+console.log(result)
