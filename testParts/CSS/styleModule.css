@@ -1,0 +1,13 @@
+.body {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .body .botoncito {
+    width: 100px;
+    height: 50px;
+    background-color: #a01098;
+    color: white;
+    border: none; }
+
+/*# sourceMappingURL=styleModule.css.map */
