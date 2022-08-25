@@ -1,9 +1,7 @@
 export class button //Clase button
 {
     constructor(objectAnimation)// se le pasara por parametro un objetoAnimation
-    {
-        this.objectAnimation=objectAnimation;
-    }
+    {this.objectAnimation=objectAnimation;}
 
     animationTo= function(buttonRecived, givenFunction)
     {   
@@ -49,6 +47,48 @@ export class button //Clase button
 }
 
 
+ export class anima //Clase button
+{
+    constructor(objectAnimation)// se le pasara por parametro un objetoAnimation
+    {
+        this.objectAnimation=objectAnimation;
+    }
+
+    animationTo= function(elementRecived)
+    {   
+        let click= false;
+        let {beggin,ending,optionFrames}=this.objectAnimation;
+        
+    
+        function animate(){
+     
+        console.log(beggin)
+       
+
+        switch(click){
+
+        
+            case false:
+                elementRecived.animate(beggin, optionFrames);
+                click=true;
+            break;
+            
+            case true:
+            
+                elementRecived.animate(ending, optionFrames);
+                click=false;
+        }
+        
+
+        }
+
+        return animate
+    }
+
+
+}
+
+
 
 export class buttonAuto 
 {
@@ -77,8 +117,6 @@ export class buttonAuto
             
             spanElement.innerHTML=icon
             coleccionBtn.push(elementButton)
-
-           
 
         }
 

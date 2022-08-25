@@ -1,0 +1,332 @@
+/*Paleta de colores*/
+
+$base-color:#0d1218 ;
+$space-layout:#17202A;
+$button-color:#c60d41;
+
+
+/*Fuentes*/
+
+$base-font: 'Montserrat', sans-serif;
+
+html
+{
+    
+    font-size: 62.5%;
+}
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.head
+{
+    width: 100%;
+    min-width: 250px;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //background-color: $base-color;
+
+    .head__nav
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .span-logo
+        {
+          display: inline-block;  
+          width: 210px;
+          height: 50px;
+          background-image: url(/img/logo.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+    }
+
+}
+
+
+/*Buscador*/
+
+.buscador-section
+{
+    width: 100%;
+    height: 26%;
+    padding-top: 36px;
+   
+    position: absolute;
+    
+    top: -165px;
+    //display: none;
+    
+    
+    .container-buscador
+    {   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+
+        .section__input
+    {
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 1px;
+        font-family: $base-font;
+
+    }
+
+     
+    .buscador-input
+    {   
+        /*width: 240px;
+        height: 50px; para la animacion*/
+        outline: none;  
+        padding: 8px;
+        background-color: $base-color;
+        color: white;
+      
+    }
+
+    .buscador-button
+    {
+        background-color: $button-color;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+       
+    }
+
+    .buscador-button:hover
+    {
+        background-color: #bc0a3c;
+    }
+   
+  
+
+    }
+
+}
+
+
+
+.main
+{   
+    width: 100%;
+    height: 70vh;
+    min-width: 250px;
+    background-color: $space-layout;
+    text-align: center;
+
+    .main__section
+    {
+
+    }
+
+    .main__arrow-down
+    {   
+        color: white;
+        margin-top: 10px;
+        position: absolute;
+        font-size: 2.1rem;
+    
+
+    }
+}
+
+
+
+
+.articles-section
+{
+    width: 100%;
+    height: 100%;
+    padding: 40px 20px;
+
+    .articles__container
+    {
+        width: 100%;
+        height: 100%;
+        background-color: $base-color;
+        
+        
+
+
+    }
+
+}
+
+
+.footer
+{
+    width: 100%;
+    min-width: 250px;
+    
+   
+    min-height: 20vh;
+    background-color: $base-color;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, (minmax(200px, 1fr)));
+    grid-template-rows: max-content;
+    justify-items: center;
+    align-content: center;
+    row-gap: 16px;
+
+
+
+    .footer__section
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    
+
+        .icons-container{
+
+            width: 100%;
+            height: 100%;
+        
+        
+
+            .logo-github
+            {   
+                width: 3rem;
+                height: 3rem;
+                display: inline-block;
+                background-image: url(/img/GitHub-Mark-Light-64px.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+
+
+        .text-container
+        {
+            width: 100%;
+            height: 100%;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            
+
+            .footer-description
+            {
+                font-family: $base-font;
+            }
+
+        }
+
+   
+}
+
+
+
+//ARTICLES
+
+.articles__container
+{   
+    display: grid;
+    overflow-y: auto;
+    grid-template-columns: repeat(auto-fit, (minmax(200px, 1fr)));
+    grid-template-rows: max-content;
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 10px;
+
+    
+
+    .articles
+    {
+   
+     
+        background-color: white;
+        font-size: 1.5rem;
+        font-family: $base-font;
+        
+        
+    }
+}
+
+
+.articles
+{   
+    display: grid;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    font-family: $base-font;
+    //grid-template-rows: max-content;
+
+   
+
+    header
+    {   
+        width: 100%;
+        
+
+        figure
+        {   
+            width: 100%;
+            height: 150px;
+           
+            img
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            figcaption
+            {
+                font-size: 1rem;
+                text-align: left;
+                margin-left: 20px;
+                color: rgba(32, 32, 32, 0.568);
+            }
+        }
+    }
+    
+    section
+    {  
+        
+        a
+        {
+        text-decoration: none;
+        color: #0d1218;
+        }
+           
+         
+         
+
+        text-align: left;
+        margin: 30px 20px 20px;
+        p
+        {
+            margin: 20px 0 0;
+        }
+    }
+}
+
+
+//buscador ;elementos que no coincidan
+.ocultar
+{
+    display: none;
+}

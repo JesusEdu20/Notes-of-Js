@@ -1,0 +1,169 @@
+/*Paleta de colores*/
+/*Fuentes*/
+html {
+  font-size: 62.5%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.head {
+  width: 100%;
+  min-width: 250px;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .head .head__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .head .head__nav .span-logo {
+      display: inline-block;
+      width: 210px;
+      height: 50px;
+      background-image: url(/img/logo.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+
+/*Buscador*/
+.buscador-section {
+  width: 100%;
+  height: 26%;
+  padding-top: 36px;
+  position: absolute;
+  top: -165px; }
+  .buscador-section .container-buscador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px; }
+    .buscador-section .container-buscador .section__input {
+      width: 200px;
+      height: 40px;
+      border: none;
+      border-radius: 1px;
+      font-family: "Montserrat", sans-serif; }
+    .buscador-section .container-buscador .buscador-input {
+      /*width: 240px;
+      height: 50px; para la animacion*/
+      outline: none;
+      padding: 8px;
+      background-color: #0d1218;
+      color: white; }
+    .buscador-section .container-buscador .buscador-button {
+      background-color: #c60d41;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold; }
+    .buscador-section .container-buscador .buscador-button:hover {
+      background-color: #bc0a3c; }
+
+.main {
+  width: 100%;
+  height: 70vh;
+  min-width: 250px;
+  background-color: #17202A;
+  text-align: center; }
+  .main .main__arrow-down {
+    color: white;
+    margin-top: 10px;
+    position: absolute;
+    font-size: 2.1rem; }
+
+.articles-section {
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px; }
+  .articles-section .articles__container {
+    width: 100%;
+    height: 100%;
+    background-color: #0d1218; }
+
+.footer {
+  width: 100%;
+  min-width: 250px;
+  min-height: 20vh;
+  background-color: #0d1218;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: max-content;
+  justify-items: center;
+  align-content: center;
+  row-gap: 16px; }
+  .footer .footer__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; }
+  .footer .icons-container {
+    width: 100%;
+    height: 100%; }
+    .footer .icons-container .logo-github {
+      width: 3rem;
+      height: 3rem;
+      display: inline-block;
+      background-image: url(/img/GitHub-Mark-Light-64px.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .footer .text-container {
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem; }
+    .footer .text-container .footer-description {
+      font-family: "Montserrat", sans-serif; }
+
+.articles__container {
+  display: grid;
+  overflow-y: auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: max-content;
+  justify-items: center;
+  align-items: center;
+  row-gap: 30px;
+  column-gap: 10px; }
+  .articles__container .articles {
+    background-color: white;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif; }
+
+.articles {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  font-family: "Montserrat", sans-serif; }
+  .articles header {
+    width: 100%; }
+    .articles header figure {
+      width: 100%;
+      height: 150px; }
+      .articles header figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+      .articles header figure figcaption {
+        font-size: 1rem;
+        text-align: left;
+        margin-left: 20px;
+        color: rgba(32, 32, 32, 0.568); }
+  .articles section {
+    text-align: left;
+    margin: 30px 20px 20px; }
+    .articles section a {
+      text-decoration: none;
+      color: #0d1218; }
+    .articles section p {
+      margin: 20px 0 0; }
+
+.ocultar {
+  display: none; }
+
+/*# sourceMappingURL=stylePJ1j.css.map */
