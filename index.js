@@ -1,6 +1,11 @@
 import { button, anima, buttonAuto,coleccionBtn } from "../modules/moduleButton.js";
+import {arrayCard} from "./modules/cards.js";
 
-//traigo elementos del Dom
+
+
+
+
+//Elementos del Dom
 const nav= document.querySelector(".head");
 const menu=document.querySelector(".buscador-section");
 const articlesSection= document.querySelector(".articles__container");
@@ -8,8 +13,11 @@ const buttonArrow=document.querySelector(".main__arrow-down");
 const main=document.querySelector(".main");
 const footer= document.querySelector(".footer");
 
-const articles= document.querySelectorAll(".articles");
-const articleTitles=document.querySelectorAll(".articles__title");
+let  articles; 
+let articleTitles;
+
+/*const articles= document.querySelectorAll(".articles");
+const articleTitles=document.querySelectorAll(".articles__title");*/
 const inputBuscar= document.querySelector(".buscador-input");
 
 //menu.style.backgroundColor="#c60d41"
@@ -126,9 +134,11 @@ const articleSectionChangeColorOn= articleSectionChangeColorObject.animationTo(a
 
 //OYENTES
 
-
+/*document.addEventListener("load",mostrarDatos)*/
 buttonArrow.addEventListener("click", buscador);
 
+//inserta las cards al cargar el document
+window.addEventListener("load", ()=>{mostrarDatos(arrayCard); console.log("hola");articles= document.querySelectorAll(".articles");articleTitles=document.querySelectorAll(".articles__title");})
 
 
 
@@ -170,7 +180,6 @@ inputBuscar.addEventListener('keyup', (e)=>{
 
 
 
-
 /*tengo que hacer un boton que reciba una funcion la cual cambie la
 clase del elemento en cuestion y que esta clase a su vez reciba una animacion*/
 
@@ -200,3 +209,89 @@ const scrollToTop=()=>
 }
 
 buttonArrow.onclick=scrollToTop;
+
+
+/*
+
+<article class="articles">
+<header>
+    <figure>
+        <img src="/img/imgToArticle.jpg" alt="plato de sandia">
+        <figcaption>Agosto 8</figcaption>
+    </figure>
+</header>
+
+<section>
+    <a href="" target="_blank"><h1 class="articles__title">Curso de JavaScript</a></h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aut voluptatem similique expedita officia asperiores suscipit perspiciatis optio maiores eaque 
+    </p>
+</section>
+</article>
+
+*/ 
+
+
+
+
+const mostrarDatos = (data) => {
+    //console.log(data)
+    let body=''
+    for(let i=0; i< data.length; i++){
+        body += ` <article class="articles">
+        <header>
+            <figure>
+                <img src="${data[i].imgUrl}" alt="${data[i].alt}">
+                <figcaption>${data[i].fecha}</figcaption>
+            </figure>
+        </header>
+        
+        <section>
+            <a href="${data[i].paginaUrl}" target="_blank"><h1 class="articles__title">${data[i].titulo}</h1></a>
+            <p>
+                ${data[i].parrafo}
+            </p>
+        </section>
+    </article>`
+                            
+    } 
+    articlesSection.innerHTML=body
+}    
+
+
+
+
+
+
+/*
+<article class="articles">
+                    <header>
+                        <figure>
+                            <img src="/img/imgToArticle.jpg" alt="plato de sandia">
+                            <figcaption>Agosto 8</figcaption>
+                        </figure>
+                    </header>
+                    
+                    <section>
+                        <a href="" target="_blank"><h1 class="articles__title">Curso de JavaScript</a></h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aut voluptatem similique expedita officia asperiores suscipit perspiciatis optio maiores eaque 
+                        </p>
+                    </section>
+                </article>
+*/ 
+
+
+
+
+
+//funciona para el evento load el cual inserta las cards
+
+
+/*const insertCards= ()=>
+{
+  
+
+}*/
+
+
