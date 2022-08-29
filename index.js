@@ -27,8 +27,7 @@ const inputBuscar= document.querySelector(".buscador-input");
 //Clase button
 
 
-console.log(menu)
-console.log(nav.clientWidth)
+
 
 
 
