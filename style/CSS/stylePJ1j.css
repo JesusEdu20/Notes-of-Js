@@ -38,7 +38,8 @@ html {
   top: -165px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #17202a; }
   .buscador-section .container-buscador {
     display: flex;
     flex-direction: column;
