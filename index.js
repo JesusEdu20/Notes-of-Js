@@ -57,7 +57,7 @@ let givenFunctionObject=
 //animacion para articles container
 let oAanimationToArticles=
 {
-    beggin: [{ transform: 'translateY(0%) '},{ transform: 'translateY(40%) '}],//fotogramas claves
+    beggin: [{ transform: 'translateY(0%) '},{ transform: 'translateY(80%) '}],//fotogramas claves
     ending: [{transform: "translateY(0)"}],//fotogramas claves; animacion de cierre
     optionFrames: { duration: 400, iterations:1,  fill: 'forwards'}
 }
@@ -73,7 +73,7 @@ let oFunctionToArticles=
 
 let ArrowFromSearch=
 {
-    beggin: [{ transform: "translateY(0%) rotate(0deg)"}, {transform: "translateY(80%) rotate(180deg)"}],//fotogramas claves
+    beggin: [{ transform: "translateY(0%) rotate(0deg)"}, {transform: "translateY(100%) rotate(180deg)"}],//fotogramas claves
     ending: [{transform: "translateY(0)"}],//fotogramas claves; animacion de cierre
     optionFrames: { duration: 400, iterations:1,  fill: 'forwards'}
 }
