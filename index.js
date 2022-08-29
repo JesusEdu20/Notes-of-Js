@@ -1,4 +1,4 @@
-import { button, anima, buttonAuto,coleccionBtn } from "../modules/moduleButton.js";
+import { button, anima, buttonAuto,coleccionBtn,evaluatorTo } from "../modules/moduleButton.js";
 import {arrayCard} from "./modules/cards.js";
 
 
@@ -127,6 +127,9 @@ const footerDownOn= footerDownObject.animationTo(footer)
 const articleSectionChangeColorObject= new anima(articleSectionAnimation);
 const articleSectionChangeColorOn= articleSectionChangeColorObject.animationTo(articlesSection);
 
+//Evalua el width para activar el menu desplegable solo para un tamaño minimo de 768px
+let watchWidtTo= new evaluatorTo();
+let watchWidtToPhone=watchWidtTo.lookAtWidth(buscador, nav, "768");
 
 
 
@@ -134,7 +137,12 @@ const articleSectionChangeColorOn= articleSectionChangeColorObject.animationTo(a
 //OYENTES
 
 /*document.addEventListener("load",mostrarDatos)*/
-buttonArrow.addEventListener("click", buscador);
+buttonArrow.addEventListener("click", watchWidtToPhone);
+
+
+
+
+
 
 //inserta las cards al cargar el document
 window.addEventListener("load", ()=>{mostrarDatos(arrayCard); console.log("hola");articles= document.querySelectorAll(".articles");articleTitles=document.querySelectorAll(".articles__title");})
@@ -237,7 +245,7 @@ const mostrarDatos = (data) => {
     //console.log(data)
     let body=''
     for(let i=0; i< data.length; i++){
-        body += ` <article class="articles">
+        body += `  <a href="${data[i].paginaUrl}" target="_blank"><article class="articles">
         <header>
             <figure>
                 <img src="${data[i].imgUrl}" alt="${data[i].alt}">
@@ -246,12 +254,12 @@ const mostrarDatos = (data) => {
         </header>
         
         <section>
-            <a href="${data[i].paginaUrl}" target="_blank"><h1 class="articles__title">${data[i].titulo}</h1></a>
+           <h1 class="articles__title">${data[i].titulo}</h1>
             <p>
                 ${data[i].parrafo}
             </p>
         </section>
-    </article>`
+    </article></a>`
                             
     } 
     articlesSection.innerHTML=body

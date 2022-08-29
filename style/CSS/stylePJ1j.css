@@ -126,6 +126,9 @@ html {
   align-items: center;
   row-gap: 30px;
   column-gap: 10px; }
+  .articles__container a {
+    text-decoration: none;
+    color: #0d1218; }
   .articles__container .articles {
     background-color: white;
     font-size: 1.5rem;
@@ -154,9 +157,6 @@ html {
   .articles section {
     text-align: left;
     margin: 30px 20px 20px; }
-    .articles section a {
-      text-decoration: none;
-      color: #0d1218; }
     .articles section p {
       margin: 20px 0 0; }
 

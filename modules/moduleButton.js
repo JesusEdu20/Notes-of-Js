@@ -127,3 +127,41 @@ export class buttonAuto
 
 export let coleccionBtn=[]
 
+
+export class evaluatorTo
+{
+    constructor()
+    {
+        /*this.funToExecute=funToExecute;
+        this.targetTo=targetTo; 
+        this.minWidth=minWidth;*/
+    }
+
+        lookAtWidth= function(funToExecute, targetTo, minWidth)
+        {
+            /*const target=t.targetTo*/
+            const execute=funToExecute;
+            const target=targetTo;
+            const width= minWidth;
+
+                function con()
+                {
+                        
+                    if(target.clientWidth<=width)
+                    {   
+                       
+                        execute();
+                        
+                    }
+
+                    else
+                    {
+                        window.location.reload()
+                    }
+
+                }
+
+            return con
+        }
+
+}

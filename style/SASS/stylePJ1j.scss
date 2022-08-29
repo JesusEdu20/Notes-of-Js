@@ -81,6 +81,8 @@ html
         align-items: center;
         row-gap: 5px;
 
+        
+
         .section__input
     {
         width: 200px;
@@ -121,6 +123,7 @@ html
     min-width: 250px;
     background-color: $space-layout;
     text-align: center;
+   
 
     .main__section
     {
@@ -242,6 +245,13 @@ html
     row-gap: 30px;
     column-gap: 10px;
 
+    a
+    {
+        text-decoration: none;
+        color: #0d1218;
+    }
+       
+
     
 
     .articles
@@ -298,12 +308,7 @@ html
     section
     {  
         
-        a
-        {
-        text-decoration: none;
-        color: #0d1218;
-        }
-           
+       
          
          
 
