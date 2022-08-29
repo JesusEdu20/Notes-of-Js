@@ -43,7 +43,7 @@ const inputBuscar= document.querySelector(".buscador-input");
 //objeto to search
 let objectAnimation=
 {
-    beggin: [{ transform: 'translateY(150%)' }],//fotogramas claves
+    beggin: [{ transform: 'translateY(180%)' }],//fotogramas claves
     ending: [{transform: "translateY(0)"}],//fotogramas claves; animacion de cierre
     optionFrames: { duration: 400, iterations:1,  fill: 'forwards'}
 }
@@ -57,7 +57,7 @@ let givenFunctionObject=
 //animacion para articles container
 let oAanimationToArticles=
 {
-    beggin: [{ transform: 'translateY(0%) '},{ transform: 'translateY(80%) '}],//fotogramas claves
+    beggin: [{ transform: 'translateY(0%) '},{ transform: 'translateY(40%) '}],//fotogramas claves
     ending: [{transform: "translateY(0)"}],//fotogramas claves; animacion de cierre
     optionFrames: { duration: 400, iterations:1,  fill: 'forwards'}
 }
