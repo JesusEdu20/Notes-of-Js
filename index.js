@@ -73,7 +73,7 @@ let oFunctionToArticles=
 
 let ArrowFromSearch=
 {
-    beggin: [{ transform: "translateY(0%) rotate(0deg)"}, {transform: "translateY(-10%) rotate(180deg)"}],//fotogramas claves
+    beggin: [{ transform: "translateY(0%) rotate(0deg)"}, {transform: "translateY(80%) rotate(180deg)"}],//fotogramas claves
     ending: [{transform: "translateY(0)"}],//fotogramas claves; animacion de cierre
     optionFrames: { duration: 400, iterations:1,  fill: 'forwards'}
 }

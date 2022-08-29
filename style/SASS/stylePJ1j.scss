@@ -67,7 +67,9 @@ html
     position: absolute;
     
     top: -165px;
-    //display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     
     .container-buscador
@@ -100,19 +102,8 @@ html
       
     }
 
-    .buscador-button
-    {
-        background-color: $button-color;
-        color: white;
-        font-size: 1.5rem;
-        font-weight: bold;
-       
-    }
+   
 
-    .buscador-button:hover
-    {
-        background-color: #bc0a3c;
-    }
    
   
 
@@ -138,7 +129,7 @@ html
     .main__arrow-down
     {   
         color: white;
-        margin-top: 10px;
+        margin-top: 20px;
         position: absolute;
         font-size: 2.1rem;
     

@@ -35,7 +35,10 @@ html {
   height: 26%;
   padding-top: 36px;
   position: absolute;
-  top: -165px; }
+  top: -165px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .buscador-section .container-buscador {
     display: flex;
     flex-direction: column;
@@ -55,13 +58,6 @@ html {
       padding: 8px;
       background-color: #0d1218;
       color: white; }
-    .buscador-section .container-buscador .buscador-button {
-      background-color: #c60d41;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold; }
-    .buscador-section .container-buscador .buscador-button:hover {
-      background-color: #bc0a3c; }
 
 .main {
   width: 100%;
@@ -71,7 +67,7 @@ html {
   text-align: center; }
   .main .main__arrow-down {
     color: white;
-    margin-top: 10px;
+    margin-top: 20px;
     position: absolute;
     font-size: 2.1rem; }
 
