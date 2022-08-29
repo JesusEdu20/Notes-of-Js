@@ -13,6 +13,7 @@ const buttonArrow=document.querySelector(".main__arrow-down");
 const main=document.querySelector(".main");
 const footer= document.querySelector(".footer");
 
+let articleLinks;
 let  articles; 
 let articleTitles;
 
@@ -145,7 +146,7 @@ buttonArrow.addEventListener("click", watchWidtToPhone);
 
 
 //inserta las cards al cargar el document
-window.addEventListener("load", ()=>{mostrarDatos(arrayCard); console.log("hola");articles= document.querySelectorAll(".articles");articleTitles=document.querySelectorAll(".articles__title");})
+window.addEventListener("load", ()=>{mostrarDatos(arrayCard); console.log("hola");articleLinks= document.querySelectorAll(".article-links");articleTitles=document.querySelectorAll(".articles__title");})
 
 
 
@@ -155,24 +156,24 @@ window.addEventListener("load", ()=>{mostrarDatos(arrayCard); console.log("hola"
 
 inputBuscar.addEventListener('keyup', (e)=>{
     let texto= e.target.value;
-    console.log(texto);
+   
 
     let  er= new RegExp(texto, "i");
     
     for (let i=0; i<articleTitles.length; i++)
     {
-        let valor= articleTitles[i];
-        let articlesValor=articles[i];
+        let titles= articleTitles[i];
+        let cards=articleLinks[i];
 
-        if(er.test(valor.innerText))
+        if(er.test(titles.innerText))
         {
-            articlesValor.classList.remove("ocultar")
+            cards.classList.remove("ocultar")
 
         }
 
         else
         {
-            articlesValor.classList.add("ocultar")
+            cards.classList.add("ocultar")
         }
     }
 })
@@ -245,7 +246,7 @@ const mostrarDatos = (data) => {
     //console.log(data)
     let body=''
     for(let i=0; i< data.length; i++){
-        body += `  <a href="${data[i].paginaUrl}" target="_blank"><article class="articles">
+        body += `  <a  class="article-links" href="${data[i].paginaUrl}" target="_blank"><article class="articles">
         <header>
             <figure>
                 <img src="${data[i].imgUrl}" alt="${data[i].alt}">
