@@ -302,4 +302,3 @@ const mostrarDatos = (data) => {
 
 }*/
 
-
