@@ -4,7 +4,7 @@
     alt:"logo del lenguaje de programacion de JavaScript",
     fecha: "Agosto 8",
     titulo: "This en JavaScript",
-    paginaUrl: "https://www.youtube.com/watch?v=-iWX-cYFpeg",
+    paginaUrl: "../articles/article.html",
     parrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aut voluptatem similique expedita officia asperiores suscipit perspiciatis optio maiores eaque"
     
 }
