@@ -1,10 +1,10 @@
  const card= 
 {
-    imgUrl:"/img/imgToArticle.jpg",
-    alt:"imagen de plato de sandias",
+    imgUrl:"https://professor-falken.com/wp-content/uploads/2017/03/Como-redirigir-o-redireccionar-a-otra-pagina-web-en-Javascript-professor-falken.com_.jpg",
+    alt:"logo del lenguaje de programacion de JavaScript",
     fecha: "Agosto 8",
-    titulo: "Curso de javaScript",
-    paginaUrl: "",
+    titulo: "This en JavaScript",
+    paginaUrl: "../scriptArticles/articles.js",
     parrafo: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, aut voluptatem similique expedita officia asperiores suscipit perspiciatis optio maiores eaque"
     
 }

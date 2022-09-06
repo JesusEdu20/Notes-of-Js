@@ -1,0 +1,106 @@
+@import "colors";
+@import "mixins";
+@import "fonts";
+
+
+
+
+header
+{
+    
+    width: 100%;
+    min-width: 350px;
+    height: 52vh;
+    text-align: left;
+
+    
+
+    .header-background__container
+    {
+        width: 100%;
+        height: 200PX;
+
+        .header-background__span
+        {   
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            @include set-background-image(url(https://miro.medium.com/max/1400/1*FiQyfkyuGZkv86Mn9wJfqg.png))
+        }
+    }
+}
+
+
+
+.header-section-title{ 
+
+    margin: 20px 20px 0 ;
+   
+
+    .header-section-title__container { 
+         
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+
+
+            .header-section-title__h1
+            {
+                color:$space-layout;
+                font-size: 3rem;
+                font-family: $base-font;
+            }
+
+            .header-section-like-button__span
+            {      
+                display: inline-block;
+                width: 30px;
+                height:30px;
+                margin: 4px;
+                @include set-background-image(url(/img/favorite_FILL0_wght400_GRAD0_opsz48.svg));
+                cursor: pointer;
+                
+               
+            }
+        
+           
+    }
+
+    .header-section-datetime
+    {
+        margin-top: 5px;
+        font-size: 1.2rem;
+        font-family:$date-time-font;
+        font-weight: 500 italic;
+        color: $date-time-color;
+
+
+    }
+}
+
+
+.header-nav
+{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+    .hedaer-nav-logo__container{
+
+    
+
+        .header-nav-logo__span
+        {   
+            display: inline-block;
+            width:210px;
+            height: 28px;
+           
+            @include set-background-image(url())
+        }
+    }
+}
+
+
