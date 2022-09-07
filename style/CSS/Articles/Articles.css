@@ -9,8 +9,8 @@ html {
 /*Fuentes*/
 header {
   width: 100%;
-  min-width: 350px;
-  height: 52vh;
+  min-width: 250px;
+  height: 62vh;
   text-align: left; }
   header .header-background__container {
     width: 100%;
@@ -31,10 +31,10 @@ header {
     justify-content: space-between;
     gap: 36px; }
     .header-section-title .header-section-title__container .header-section-title__h1 {
-      color: #17202A;
+      color: #50565c;
       font-size: 3rem;
       font-family: "Montserrat", sans-serif; }
-    .header-section-title .header-section-title__container .header-section-like-button__span {
+    .header-section-title .header-section-title__container .header-section__container .header-section-like-button__span {
       display: inline-block;
       width: 30px;
       height: 30px;
@@ -55,8 +55,22 @@ header {
   width: 100%;
   height: 50px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center; }
+  .header-nav .header-nav-toogle-button__container {
+    width: 80px;
+    height: 30px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #909dab; }
+    .header-nav .header-nav-toogle-button__container .header-nav-toogle-button__button {
+      width: 26px;
+      height: 26px;
+      border-radius: 15px;
+      border: none;
+      outline: none; }
   .header-nav .hedaer-nav-logo__container .header-nav-logo__span {
     display: inline-block;
     width: 210px;
@@ -65,5 +79,24 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
+
+/*Fuentes*/
+main {
+  width: 100%;
+  min-width: 250px; }
+  main .main-topic-website__section {
+    margin: 36px;
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    text-align: justify;
+    line-height: 26px; }
+    main .main-topic-website__section .main-topic-website-section__container {
+      margin-bottom: 26px; }
+      main .main-topic-website__section .main-topic-website-section__container .main-topic-website-section__h2 {
+        color: #50565c80; }
+      main .main-topic-website__section .main-topic-website-section__container .main-topic-website-section__p {
+        color: #40494e; }
+      main .main-topic-website__section .main-topic-website-section__container .main-topic-website-section-dark__p {
+        color: #8db2c7; }
 
 /*# sourceMappingURL=Articles.css.map */

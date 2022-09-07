@@ -1,0 +1,46 @@
+@import "colors";
+@import "mixins";
+@import "fonts";
+
+
+main{ 
+
+    width:100%;
+    min-width:250px;
+    
+
+    .main-topic-website__section{
+        
+       
+        margin: 36px;
+        font-size: 1.5rem;
+        font-family: $paragraph-font;
+        text-align: justify;
+        line-height: 26px;
+
+        .main-topic-website-section__container{
+
+            margin-bottom: 26px;
+
+            .main-topic-website-section__h2{
+            
+                color: $title-color;
+            }
+    
+
+            .main-topic-website-section__p{
+                
+                color: $paragraph-color;
+            }
+
+            .main-topic-website-section-dark__p{
+                
+                color: #8db2c7;
+            }
+        }
+
+        
+        
+    }
+}
+

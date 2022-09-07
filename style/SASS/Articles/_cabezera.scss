@@ -9,8 +9,8 @@ header
 {
     
     width: 100%;
-    min-width: 350px;
-    height: 52vh;
+    min-width: 250px;
+    height: 62vh;
     text-align: left;
 
     
@@ -46,22 +46,24 @@ header
 
             .header-section-title__h1
             {
-                color:$space-layout;
+                color:#50565c;
                 font-size: 3rem;
                 font-family: $base-font;
             }
 
-            .header-section-like-button__span
-            {      
-                display: inline-block;
-                width: 30px;
-                height:30px;
-                margin: 4px;
-                @include set-background-image(url(/img/favorite_FILL0_wght400_GRAD0_opsz48.svg));
-                cursor: pointer;
+            .header-section__container{ 
+                .header-section-like-button__span
+                {      
+                    display: inline-block;
+                    width: 30px;
+                    height:30px;
+                    margin: 4px;
+                    @include set-background-image(url(/img/favorite_FILL0_wght400_GRAD0_opsz48.svg));
+                    cursor: pointer;
+                    
                 
-               
-            }
+                }
+            }    
         
            
     }
@@ -84,9 +86,30 @@ header
     width: 100%;
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
   
+    .header-nav-toogle-button__container{
+
+        width: 80px;
+        height: 30px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        background-color: #909dab;
+        
+
+        .header-nav-toogle-button__button{
+
+            width: 26px;
+            height: 26px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+        }
+    }
+    
 
     .hedaer-nav-logo__container{
 
